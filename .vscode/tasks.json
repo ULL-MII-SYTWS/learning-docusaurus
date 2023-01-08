@@ -1,0 +1,29 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "start",
+			"problemMatcher": [],
+			"label": "npm: start",
+			"detail": "docusaurus start",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		},
+		{
+      "label": "node v18", 
+      "type": "shell",
+      "command": "nvm alias default 18", // set default v18 with docusaurus
+      "group": "none",
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      },
+      "runOptions": {
+        "runOn": "folderOpen"
+      }
+    }
+	]
+}

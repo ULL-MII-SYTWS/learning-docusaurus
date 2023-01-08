@@ -23,3 +23,22 @@ A blog post folder can be convenient to co-locate blog post images:
 The blog supports tags as well!
 
 **And if you don't want a blog**: just delete this directory, and use `blog: false` in your Docusaurus config.
+
+## Code example
+
+```js {4}
+// docusaurus.config.js
+module.exports = {
+  // ...
+  plugins: [
+    [
+      '@docusaurus/plugin-content-blog',
+      {
+        // ...
+        blogSidebarCount: 'ALL',
+        blogSidebarTitle: 'All our posts',
+      },
+    ],
+  ],
+};
+```
