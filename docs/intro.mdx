@@ -4,7 +4,9 @@ sidebar_position: 1
 
 # Tutorial Intro
 
+:::danger
 Let's discover **Docusaurus in less than 5 minutes**.
+:::
 
 ## Getting Started
 
@@ -26,8 +28,9 @@ The classic template will automatically be added to your project after you run t
 ```bash
 npm init docusaurus@latest my-website classic
 ```
-
+:::caution
 You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+:::
 
 The command also installs all necessary dependencies you need to run Docusaurus.
 
@@ -39,9 +42,49 @@ Run the development server:
 cd my-website
 npm run start
 ```
-
+:::info
 The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
+:::
 
 The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
 
 Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+
+## Exporting components
+
+:::tip
+
+You can export components from your MDX files. See 
+section Exporting components in [MDX and React](https://docusaurus.io/docs/markdown-features/react)
+
+:::
+
+:::note
+I can write **Markdown** alongside my _JSX_!
+:::
+
+import Highlight from '@site/src/components/Highlight';
+
+<Highlight color="#25c2a0">Docusaurus green</Highlight> and 
+
+<Highlight color="#1877F2">Facebook blue</Highlight> are my favorite colors.
+
+<Highlight color="#25c2a0">Docusaurus green</Highlight>
+
+## Using Custom Fields in MDX
+
+See [Custom Configurations](https://docusaurus.io/docs/configuration#custom-configurations) for more information.
+
+import UseCustomFields from '@site/src/components/UseCustomFields';
+
+<UseCustomFields />
+
+## Mermaid
+
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```

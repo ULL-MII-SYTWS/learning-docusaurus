@@ -15,7 +15,7 @@ module.exports = {
     {to: '/blog', label: 'Clases', position: 'left'},
     {to: '/labs', label: 'Labs', position: 'left'},
     {to: '/teams', label: 'Teams', position: 'left'},
-    {to: '/resources', label: 'Context', position: 'left'},
+    {to: '/docs/resources', label: 'Resources', position: 'right'},
 
     {
       type: 'dropdown',
@@ -64,11 +64,7 @@ module.exports = {
         { label: 'Campus de Masters', href: "https://campusdoctoradoyposgrado2122.ull.es/my/"},
       ]
     },
-    {
-      to: 'github',
-      label: 'GitHub',
-      position: 'right',
-    },
+    require('./github-navbar'),
     {
       label: 'Google',
       type: 'dropdown',

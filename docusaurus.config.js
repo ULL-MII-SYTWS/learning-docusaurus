@@ -9,8 +9,8 @@ const katex = require('rehype-katex');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'Procesadores de Lenguajes Site',
+  tagline: 'ASTs are cool',
   url: 'https://your-docusaurus-test-site.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -42,7 +42,7 @@ const config = {
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
           remarkPlugins: [math],
-          rehypePlugins: [katex],    
+          rehypePlugins: [katex],
         },
         blog: {
           showReadingTime: true,
@@ -51,7 +51,7 @@ const config = {
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
           remarkPlugins: [math],
-          rehypePlugins: [katex],  
+          rehypePlugins: [katex],
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -128,6 +128,11 @@ const config = {
       },
       announcementBar: require('./announcement-bar.js'),
     }),
+  markdown: {
+    mermaid: true,
+  },
+  themes: ['@docusaurus/theme-mermaid'],
+  customFields: require('./customFields.js')
 };
 
 module.exports = config;
